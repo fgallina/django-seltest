@@ -1,0 +1,61 @@
+This package contains seltest.
+
+0. Info
+
+   Author: Fabián Ezequiel Gallina
+   Contact: fabian at gnu dot org dot ar
+   Project homepage: http://github.com/fgallina/seltest
+   My Blog: http://www.from-the-cloud.com
+   Downloads page: http://github.com/fgallina/seltest/downloads
+
+1. Introduction
+
+   seltest allows you to run Selenium based tests in you django
+   application.
+
+   It takes care of running and killing a django test server and the
+   selenium server while executing selenium tests.
+
+2. Requirements
+
+   1) Selenium python client driver.
+   2) Selenium server.
+
+3. Installation
+
+   Install seltest to your PYTHONPATH, and add it in the list of
+   INSTALLED_APPS in your settings.py.
+
+   Then set SELTEST_SELENIUM_SERVER_PATH to the path where
+   selenium-server.jar is located.
+
+   That's the minimal configuration needed.
+
+4. Usage
+
+   seltest provides the management command runseltest that works
+   exactly the same way as django's test command do, but instead of
+   looking tests in the "tests" module of each application it does it
+   in the "selenium_tests" one.
+
+   So this will run all selenium based tests:
+
+   python manage.py runseltest
+
+   While this will run all tests for an app:
+
+   python manage.py runseltest app
+
+   And this will run just one test:
+
+   python manage.py runseltest app.SpecificTest
+
+5. Bug Reports
+
+   If you find a bug please report it sending an email listed in the
+   top of the file.
+
+6. License
+
+   seltest is free software under the BSD license, see LICENSE file for
+   details.
