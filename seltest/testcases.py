@@ -25,5 +25,5 @@ class SeleniumTestCase(TestCase):
         self.selenium.start()
 
     def _post_teardown(self):
-        super(SeleniumTestCase, self)._pre_setup()
+        super(SeleniumTestCase, self)._post_teardown()
         self.selenium.stop()
